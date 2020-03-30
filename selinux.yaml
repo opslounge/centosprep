@@ -1,0 +1,9 @@
+
+- hosts: ksphere
+  become: yes
+  tasks:
+    - name: Disable SELinux
+      selinux:
+        state: disabled   
+  
+

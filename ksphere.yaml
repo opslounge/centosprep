@@ -1,0 +1,13 @@
+######################
+#
+#
+#    These Playbooks will prep basic CENTOS hosts for loading K8s  
+#    By Andy Parsons 14/2/2020
+#    Aparsons@purestorage.com 
+#
+#####################
+
+- include: keys.yaml     #installs SSH keys on your hosts for passwordless login
+- include: swap.yaml     #turns off swap on each host needed for K8s support
+- include: osprep.yaml   #adds all the required packages for NFS/iSCSI/GIT etc. 
+- include: selinux.yaml  #disables SE LINUX on all the hosts
